@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
             checkout scm
+            sh'npm install'
                 echo 'Building..'
             }
         }
