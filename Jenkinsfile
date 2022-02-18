@@ -16,10 +16,10 @@ pipeline {
         stage('SAST Scan') {
             steps {
              //   bat 'sonar-scanner' 
-             withSonarQubeEnv('laptop') {
+           //  withSonarQubeEnv('laptop') {
                         // some block
-                        bat 'sonar-scanner' 
-                    }             
+             //           bat 'sonar-scanner' 
+              //      }             
                 echo 'Scanning..'
             }
         }
