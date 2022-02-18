@@ -9,8 +9,7 @@ pipeline {
         stage('Build') {
             steps {
             checkout scm
-            sh 'sudo apt install nodejs'
-            sh'npm install'
+            bat'npm install'
                 echo 'Building..'
             }
         }
