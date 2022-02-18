@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    node("laptop") {
     stages {
         stage('Build') {
             steps {
@@ -20,5 +20,6 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+    }
     }
 }
