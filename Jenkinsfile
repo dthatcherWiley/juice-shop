@@ -13,9 +13,10 @@ pipeline {
                 echo 'Building..'
             }
         }
-        stage('Test') {
+        stage('SAST Scan') {
             steps {
-                echo 'Testing..'
+                bat 'sonar-scanner'
+                echo 'Scanning..'
             }
         }
         stage('Deploy') {
