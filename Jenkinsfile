@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
             checkout scm
+            sh 'apt install nodejs'
             sh'npm install'
                 echo 'Building..'
             }
