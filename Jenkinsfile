@@ -15,10 +15,7 @@ pipeline {
         }
         stage('SAST Scan') {
             steps {
-             //   bat 'sonar-scanner'
-              withSonarQubeEnv('Laptop') {
-                bat 'mvn clean package sonar:sonar'
-              }
+             //   bat 'sonar-scanner'              
                 echo 'Scanning..'
             }
         }
